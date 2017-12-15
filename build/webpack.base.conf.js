@@ -7,6 +7,8 @@ const vueLoaderConfig = require('./vue-loader.conf')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+//为引入全局jq而增加的
+const webpack=require('webpack')
 
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
@@ -36,6 +38,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      //引入全局jq
+      'jquery':'jquery'
     }
   },
   module: {
@@ -73,9 +77,16 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
     ]
   },
+  // 增加一个plugins 引入全局jq
+   plugins: [
+      new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery"
+      })
+   ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).

@@ -1,18 +1,19 @@
 <template>
-  <div id="top">
-    <h1>{{ msg }}</h1>
+  <div id="personal">
+    <p>{{msg}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'top',
+  name: 'personal',
   data () {
     return {
-      msg: '共同头部'
+      msg: '个人中心'
     }
   }
 }
 </script>
 <style>
+
 </style>
