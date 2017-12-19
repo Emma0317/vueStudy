@@ -1,6 +1,6 @@
 <template>
   <div id="top">
-    <h1>{{ msg }}</h1>
+    <p class="title">{{ msg }}</p>
   </div>
 </template>
 
@@ -9,10 +9,12 @@ export default {
   name: 'top',
   data () {
     return {
-      msg: '共同头部'
+      msg: '首页'
     }
   }
 }
 </script>
 <style>
+#top{height:44px;background-color:#FF5000;color:#fff;}
+#top>p{margin:0;text-align:center;line-height:44px;font-size:1.8rem;}
 </style>

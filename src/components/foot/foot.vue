@@ -1,7 +1,7 @@
 <template>
   <div id="foot">
     <ul class="nav nav-pills">
-      <li role="presentation"><router-link :to="{ path: '/'}"><i class="glyphicon glyphicon-home"></i>首页</router-link></li>
+      <li role="presentation"><router-link :to="{ path: '/home'}"><i class="glyphicon glyphicon-home"></i>首页</router-link></li>
       <li role="presentation"><router-link :to="{ path: '/views'}"><i class="glyphicon glyphicon-fire"></i>发现</router-link></li>
       <li role="presentation"><router-link :to="{ path: '/carts'}"><i class="glyphicon glyphicon-shopping-cart"></i>购物车</router-link></li>
       <li role="presentation"><router-link :to="{ path: '/personal'}"><i class="glyphicon glyphicon-user"></i>我的小屋</router-link></li>
@@ -11,12 +11,7 @@
 
 <script>
 export default {
-  name: 'foot',
-  data(){
-    return {
-      msg: '共同底部'
-    }
-  }
+  name: 'foot'
 }
 </script>
 <style>
