@@ -22,5 +22,5 @@ export default {
 }
 </script>
 <style>
-#home div.search{padding:0 20px 10px 20px;background-color:#FF5000;}
+#home div.search{padding:0 20px 10px 20px;background-color:#0af;}
 </style>
